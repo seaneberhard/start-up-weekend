@@ -11,7 +11,7 @@ class ParacetamolCounter:
     return self.timeLeft() == dt.timedelta(0)
     
   def timeLeft(self):
-    partyTime = max(self.last[0] + dt.timedelta(hours = 4), self.last[3] + dt.timedelta(days = 1))
+    partyTime = max(self.last[0] + dt.timedelta(hours = 5), self.last[3] + dt.timedelta(days = 1))
     return max(dt.timedelta(0), partyTime - dt.datetime.now())
     
 
