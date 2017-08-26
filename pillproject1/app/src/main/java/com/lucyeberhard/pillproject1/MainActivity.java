@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
     private long timeLeft() {
         SharedPreferences pref = getPreferences(MODE_PRIVATE);
         long now = new Date().getTime();
-        long d1 = now - pref.getLong("-1", 0) - 4*3600*1000;
-        long d2 = now - pref.getLong("-4", 0) - 24*3600*1000;
+        long d1 = 4 * 3600 * 1000 - (now - pref.getLong("-1", 0));
+        long d2 = 24 * 3600 * 1000 - (now - pref.getLong("-4", 0));
         return Math.max(0, Math.max(d1, d2));
     }
 
