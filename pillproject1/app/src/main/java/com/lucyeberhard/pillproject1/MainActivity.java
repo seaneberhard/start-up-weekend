@@ -1,5 +1,6 @@
 package com.lucyeberhard.pillproject1;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -55,14 +56,31 @@ public class MainActivity extends AppCompatActivity {
      */
     public void pop(View view) {
         if (timeLeft() > 0) return;
+        Date now = new Date();
         SharedPreferences pref = getPreferences(MODE_PRIVATE);
         SharedPreferences.Editor editor = pref.edit();
         editor.putLong("-4", pref.getLong("-3", 0));
         editor.putLong("-3", pref.getLong("-2", 0));
         editor.putLong("-2", pref.getLong("-1", 0));
-        editor.putLong("-1", new Date().getTime());
+        editor.putLong("-1", now.getTime());
+        editor.putString("log", pref.getString("log","") + now.toString() + "\n");
         editor.apply();
         countdown();
+    }
+
+    /*
+    Called when user requests log
+     */
+    public void getLog(View view) {
+        Intent intent = new Intent(this, ShowLog.class);
+        startActivity(intent);
+    }
+
+    /*
+    Called when user requests about
+     */
+    public void comeAbout(View view) {
+
     }
 }
 

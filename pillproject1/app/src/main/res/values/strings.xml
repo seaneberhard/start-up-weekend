@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Dose Diary</string>
+    <string name="about0">Dose diary is a simple countdown toy. Suppose there is a thing X that you would like to do, but you are not allowed to do X more than once in 4 hours, or more than 4 times in 24 hours. Dose Diary counts down to the next time you are allowed to do X.</string>
+    <string name="about1">By using this app you agree that dose diary is just a toy and that you will not use it for anything medical, and especially not for controlling paracetamol intake.</string>
 </resources>
