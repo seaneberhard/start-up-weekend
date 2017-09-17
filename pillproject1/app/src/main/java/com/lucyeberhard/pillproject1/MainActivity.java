@@ -14,8 +14,9 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TIME_FORMAT = "%02d:%02d:%02d";
-    private static final long time1 = 4 * 3600 * 1000;
-    private static final long time2 = 24 * 3600 * 1000;
+    private static final boolean testing = false;
+    private static final long fourHours = testing ? 4 * 1000 :  4 * 3600 * 1000;
+    private static final long oneDay = testing ? 24 * 1000 :  24 * 3600 * 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +49,8 @@ public class MainActivity extends AppCompatActivity {
     private long timeLeft() {
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
         long now = new Date().getTime();
-        long d1 = time1 - (now - pref.getLong("-1", 0));
-        long d2 = time2 - (now - pref.getLong("-4", 0));
+        long d1 = fourHours - (now - pref.getLong("-1", 0));
+        long d2 = oneDay - (now - pref.getLong("-4", 0));
         return Math.max(0, Math.max(d1, d2));
     }
 
