@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                text.setText("Pop Pill");
+                text.setText("Log Dose");
             }
         }.start();
     }
