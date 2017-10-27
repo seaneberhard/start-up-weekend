@@ -2,17 +2,10 @@
 
     <!-- Base application theme. -->
 
-    <style name="AppTheme" parent="@android:style/Theme.Holo.Light">
-
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-    <!--    <item name="android:actionBarStyle">@style/DoseDiaryTitleBar</item> -->
     </style>
-
-    <!--
-    <style name="DoseDiaryTitleBar" parent="@android:style/Widget.Holo.Light.ActionBar">
-        <item name="android background">@android:colour/holo_blue_dark</item>
-    </style> -->
 
 </resources>
