@@ -26,6 +26,32 @@
             android:layout_margin="20dip"
             android:text="@string/about1" >
         </TextView>
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dip"
+            android:text="@string/about2" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dip"
+            android:text="@string/about3" >
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dip"
+            android:text="@string/about4" >
+        </TextView>
+
     </LinearLayout>
 
 </ScrollView>
