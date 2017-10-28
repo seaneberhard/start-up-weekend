@@ -26,7 +26,7 @@ public class AboutActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        TextView aboutTextView = (TextView) findViewById(R.id.about_text_view)
+        TextView aboutTextView = (TextView) findViewById(R.id.about_text_view);
         aboutTextView.setText(
                 fromHtml(
                         "<h1>" + getString(R.string.app_name) + ", Version " + versionName + "</h1>"
