@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
     Called when user requests log
      */
     public void openLog(View view) {
-        Intent intent = new Intent(this, ShowLog.class);
+        Intent intent = new Intent(this, ShowLogActivity.class);
         startActivity(intent);
     }
 
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
     Called when user requests about
      */
     public void comeAbout(View view) {
-        Intent intent = new Intent(this, About.class);
+        Intent intent = new Intent(this, AboutActivity.class);
         startActivity(intent);
     }
 }

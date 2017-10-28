@@ -16,10 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ShowLog"
+        <activity android:name=".ShowLogActivity"
             android:parentActivityName=".MainActivity">
         </activity>
-        <activity android:name=".About"
+        <activity android:name=".AboutActivity"
             android:parentActivityName=".MainActivity">
         </activity>
     </application>
