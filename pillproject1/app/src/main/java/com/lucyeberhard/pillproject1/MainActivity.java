@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                text.setText("Log Dose");
+                text.setText(R.string.log_dose_text);
             }
         }.start();
     }

@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Dose diary</string>
+    <string name="app_name">Dose Diary</string>
     <string name="about_text">
         <![CDATA[
-            <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+            <!DOCTYPE HTML>
             <HTML>
                 <HEAD>
                     <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
@@ -65,4 +65,5 @@
             </HTML>
         ]]>
     </string>
+    <string name="log_dose_text">Log Dose</string>
 </resources>

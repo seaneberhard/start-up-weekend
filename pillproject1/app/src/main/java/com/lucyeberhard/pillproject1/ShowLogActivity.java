@@ -11,6 +11,8 @@ public class ShowLogActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_log);
-        ((TextView) findViewById(R.id.TextView01)).setText(PreferenceManager.getDefaultSharedPreferences(this).getString("log",""));
+        ((TextView) findViewById(R.id.log_text_view)).setText(
+                PreferenceManager.getDefaultSharedPreferences(this).getString("log","")
+        );
     }
 }
