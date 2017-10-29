@@ -1,25 +1,25 @@
 <resources>
     <string name="app_name">Dose Diary</string>
+    <string name="log_dose_text">Log Dose</string>
     <string name="about_text">
         <![CDATA[
             <!DOCTYPE HTML>
             <!HTML>
             <HTML>
-                <FONT COLOR="#000000"><FONT FACE="arial, sans-serif"><FONT SIZE=4>
-	                <P><b>$APP_NAME is a simple app to help adults record their paracetamol (or acetominophen) intake.</b></p>
+                <FONT COLOR=\"#000000\"><FONT FACE=\"arial, sans-serif\">
+	                <P><b>$APP_NAME is a simple app to help adults record their paracetamol (or acetaminophen) intake.</b></p>
 	                <P>Paracetamol should only be taken as directed on the label or leaflet, or as instructed by a health professional.</P>
 	                <P><u>Notes on paracetamol from the NHS website:</u></P>
 	                <ul><P>• How much paracetamol you can take depends on your age, your weight, the type of paracetamol you\'re taking and how strong it is.</P>
 	                <p>• Adults can usually take one or two 500&nbsp;mg tablets every 4–6&nbsp;hours, but shouldn\'t take more than 4&nbsp;g (eight 500&nbsp;mg tablets) in the space of 24&nbsp;hours.</p>
 	                <P>• Be careful not to use other medications that contain paracetamol as an ingredient (such as some cold and flu remedies) while you\'re taking paracetamol.</P></ul>
-	                <P>See more at <a HREF="http://www.nhs.uk/Conditions/Painkillers-paracetamol/">www.nhs.uk/Conditions/Painkillers-paracetamol/</a>.</P>
+	                <P>See more at <a HREF=\"http://www.nhs.uk/Conditions/Painkillers-paracetamol/\">www.nhs.uk/Conditions/Painkillers-paracetamol/</a>.</P>
  	            </FONT></FONT></FONT>
-	            <FONT COLOR="#A9A9A9"><FONT FACE="arial, sans-serif"><FONT SIZE=3>
+	            <FONT COLOR=#A9A9A9><FONT FACE=\"arial, sans-serif\"><small>
 	                <P>Correct as of 28 October 2017.</P>
-                </FONT></FONT></FONT>
+                </small></FONT></FONT>
             </BODY>
             </HTML>
         ]]>
     </string>
-    <string name="log_dose_text">Log Dose</string>
 </resources>
