@@ -3,64 +3,20 @@
     <string name="about_text">
         <![CDATA[
             <!DOCTYPE HTML>
+            <!HTML>
             <HTML>
-                <HEAD>
-                    <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
-                    <TITLE></TITLE>
-                    <META NAME="GENERATOR" CONTENT="OpenOffice 4.1.3  (Unix)">
-                    <META NAME="AUTHOR" CONTENT="Lucy Robinson">
-                    <META NAME="CREATED" CONTENT="20171028;17565900">
-                    <META NAME="CHANGEDBY" CONTENT="Lucy Robinson">
-                    <META NAME="CHANGED" CONTENT="20171028;18043500">
-                    <META NAME="CHANGEDBY" CONTENT="Lucy Robinson">
-                    <STYLE TYPE="text/css">
-                        <!--
-                            @page { margin: 2cm }
-                            P { margin-bottom: 0.21cm }
-                        -->
-                    </STYLE>
-                </HEAD>
-                <BODY LANG="en-GB" DIR="LTR">
-                    <P STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal; widows: 2; orphans: 2">
-                        <FONT COLOR="#222222"><FONT FACE="arial, sans-serif"><FONT SIZE=3>Dose
-                            Diary is a simple app to help adults record their paracetamol (or
-                            acetominophen) intake.</FONT></FONT></FONT></P>
-                <P STYLE="margin-bottom: 0cm; widows: 2; orphans: 2"><BR>
-                </P>
-                <P STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal; widows: 2; orphans: 2">
-                    <FONT COLOR="#333333"><FONT FACE="arial, helvetica, sans-serif"><FONT SIZE=3>Paracetamol
-                        should only be taken as directed on the label or leaflet, or as
-                        instructed by a health professional.</FONT></FONT></FONT></P>
-                <P STYLE="margin-bottom: 0cm; widows: 2; orphans: 2"><BR><FONT COLOR="#222222"><FONT FACE="arial, sans-serif"><FONT SIZE=3><SPAN STYLE="font-style: normal"><SPAN STYLE="text-decoration: none"><SPAN STYLE="font-weight: normal">Notes
-                    on paracetamol from the NHS website:</SPAN></SPAN></SPAN></FONT></FONT></FONT></P>
-                <UL>
-                    <LI><P STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal; widows: 2; orphans: 2">
-                        <FONT COLOR="#222222"><FONT FACE="arial, sans-serif"><FONT SIZE=3>How
-                            much paracetamol you can take depends on your age, your weight, the
-                            type of paracetamol you're taking and how strong it is.</FONT></FONT></FONT></P>
-                    <LI><P STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal; widows: 2; orphans: 2">
-                        <FONT COLOR="#222222"><FONT FACE="arial, sans-serif"><FONT SIZE=3>Adults
-                            can usually take one or two 500 mg tablets every 4–6 hours, but
-                            shouldn't take more than 4 g (eight 500 mg tablets) in the space of
-                            24 hours.</FONT></FONT></FONT></P>
-                    <LI><P STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal; widows: 2; orphans: 2">
-                        <FONT COLOR="#333333"><FONT FACE="arial, helvetica, sans-serif"><FONT SIZE=3>Be
-                            careful not to use other medications that contain paracetamol as an
-                            ingredient (such as some cold and flu remedies) while you're taking
-                            paracetamol.</FONT></FONT></FONT></P>
-                </UL>
-                <P STYLE="margin-bottom: 0cm; widows: 2; orphans: 2"><BR>
-                </P>
-                <P STYLE="margin-bottom: 0cm; widows: 2; orphans: 2"><FONT COLOR="#333333"><FONT FACE="arial, helvetica, sans-serif"><FONT SIZE=3><SPAN STYLE="font-style: normal"><SPAN STYLE="font-weight: normal">Please
-                    see more details at <A HREF="http://www.nhs.uk/Conditions/Painkillers-paracetamol/">www.nhs.uk/Conditions/Painkillers-paracetamol/</A>.</SPAN></SPAN></FONT></FONT></FONT></P>
-                <P STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal; widows: 2; orphans: 2">
-                    <BR>
-                </P>
-                <P STYLE="margin-bottom: 0cm; font-style: normal; font-weight: normal; widows: 2; orphans: 2">
-                    <FONT COLOR="#333333"><FONT FACE="arial, helvetica, sans-serif"><FONT SIZE=3>Correct
-                        as of 28 October 2017.</FONT></FONT></FONT></P>
-                <P STYLE="margin-bottom: 0cm"><BR>
-                </P>
+                <FONT COLOR="#000000"><FONT FACE="arial, sans-serif"><FONT SIZE=4>
+	                <P><b>$APP_NAME is a simple app to help adults record their paracetamol (or acetominophen) intake.</b></p>
+	                <P>Paracetamol should only be taken as directed on the label or leaflet, or as instructed by a health professional.</P>
+	                <P><u>Notes on paracetamol from the NHS website:</u></P>
+	                <ul><P>• How much paracetamol you can take depends on your age, your weight, the type of paracetamol you\'re taking and how strong it is.</P>
+	                <p>• Adults can usually take one or two 500&nbsp;mg tablets every 4–6&nbsp;hours, but shouldn\'t take more than 4&nbsp;g (eight 500&nbsp;mg tablets) in the space of 24&nbsp;hours.</p>
+	                <P>• Be careful not to use other medications that contain paracetamol as an ingredient (such as some cold and flu remedies) while you\'re taking paracetamol.</P></ul>
+	                <P>See more at <a HREF="http://www.nhs.uk/Conditions/Painkillers-paracetamol/">www.nhs.uk/Conditions/Painkillers-paracetamol/</a>.</P>
+ 	            </FONT></FONT></FONT>
+	            <FONT COLOR="#A9A9A9"><FONT FACE="arial, sans-serif"><FONT SIZE=3>
+	                <P>Correct as of 28 October 2017.</P>
+                </FONT></FONT></FONT>
             </BODY>
             </HTML>
         ]]>
