@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
 import android.widget.TextView;
 
 import java.util.jar.Attributes;
@@ -18,21 +19,12 @@ public class AboutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        String versionName = "";
-        try {
-            PackageInfo pinfo = getPackageManager().getPackageInfo(getPackageName(), 0);
-            versionName = pinfo.versionName;
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
+        String aboutText = getString(R.string.about_text)
+                .replace("$APPNAME", getString(R.string.app_name));
 
         TextView aboutTextView = (TextView) findViewById(R.id.about_text_view);
-        aboutTextView.setText(
-                fromHtml(
-                        "<h1>" + getString(R.string.app_name) + ", Version " + versionName + "</h1>"
-                                + getString(R.string.about_text)
-                )
-        );
+        aboutTextView.setText(fromHtml(aboutText));
+        aboutTextView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     @SuppressWarnings("deprecation")

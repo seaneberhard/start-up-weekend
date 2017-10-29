@@ -21,6 +21,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        if (pref.getBoolean("firstTimer", true)) {
+            pref.edit().putBoolean("firstTimer", false).apply();
+            startActivity(new Intent(this, AboutActivity.class));
+        }
+
         setContentView(R.layout.activity_main);
         countdown();
     }
