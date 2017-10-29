@@ -20,7 +20,7 @@ public class AboutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_about);
 
         String aboutText = getString(R.string.about_text)
-                .replace("$APPNAME", getString(R.string.app_name));
+                .replace("$APP_NAME", getString(R.string.app_name));
 
         TextView aboutTextView = (TextView) findViewById(R.id.about_text_view);
         aboutTextView.setText(fromHtml(aboutText));
