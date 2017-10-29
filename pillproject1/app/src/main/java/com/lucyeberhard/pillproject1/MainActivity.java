@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         editor.putLong("-3", pref.getLong("-2", 0));
         editor.putLong("-2", pref.getLong("-1", 0));
         editor.putLong("-1", now.getTime());
-        editor.putString("log", pref.getString("log","") + now.toString() + "\n");
+        editor.putString("log",  now.toString() + "\n" + pref.getString("log",""));
         editor.apply();
         countdown();
     }
