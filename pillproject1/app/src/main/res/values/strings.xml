@@ -114,4 +114,6 @@
     </string>
     <string name="action_settings">Settings</string>
     <string name="serialization">trackerPileSerialization</string>
+    <string name="title_activity_countdown">CountdownActivity</string>
+    <string name="section_format">Hello World from section: %1$d</string>
 </resources>

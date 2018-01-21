@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void save() {
-        prefs.edit().putString(R.string.serialization, tp.serialize());
+        prefs.edit().putString(getString(R.string.serialization), tp.serialize());
     }
 
     /*

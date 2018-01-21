@@ -18,10 +18,10 @@
         </activity>
         <activity
             android:name=".ShowLogActivity"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AboutActivity"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".NewTrackerActivity"
             android:label="@string/title_activity_new_tracker"
@@ -31,6 +31,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.lucyeberhard.pillproject1.MainActivity" />
         </activity>
+        <activity
+            android:name=".CountdownActivity"
+            android:label="@string/title_activity_countdown"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
