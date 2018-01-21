@@ -96,25 +96,12 @@ public class Countdown extends AppCompatActivity {
          * The fragment argument representing the section number for this
          * fragment.
          */
-
-        private static final String ARG_SECTION_NUMBER = "section_number";
-
-
         ArrayList<Pair<Integer, Long>> limits;
         ArrayList<Date> log;
 
         public Tracker() {
-
             limits = new ArrayList<Pair<Integer, Long>>();
             log = new ArrayList<Date>();
-
-        }
-
-        public static Tracker getDefault() {
-            Tracker t = new Tracker();
-            t.addLimit(1, 4*3600*1000);
-            t.addLimit(4, 24*3600*1000);
-            return t;
         }
 
         public void addLimit(int quantity, long time) {
@@ -150,17 +137,6 @@ public class Countdown extends AppCompatActivity {
             }
             return str;
         }
-        /**
-         * Returns a new instance of this fragment for the given section
-         * number.
-         */
-        public static Tracker newInstance(int sectionNumber) {
-            Tracker fragment = new Tracker();
-            Bundle args = new Bundle();
-            args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-            fragment.setArguments(args);
-            return fragment;
-        }
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -185,7 +161,12 @@ public class Countdown extends AppCompatActivity {
             super(fm);
             // todo: attempt to deserialize saved state, else continue
             trackers = new ArrayList<Tracker> ();
-            trackers.add(Tracker.getDefault());
+
+            // add default tracker
+            Tracker t = new Tracker();
+            t.addLimit(1, 4*3600*1000);
+            t.addLimit(4, 24*3600*1000);
+            trackers.add(t);
         }
 
         @Override
