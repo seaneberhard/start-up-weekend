@@ -21,6 +21,13 @@ public class Tracker {
 
     }
 
+    public static Tracker getDefault() {
+        Tracker t = new Tracker();
+        t.addLimit(1, 4*3600*1000);
+        t.addLimit(4, 24*3600*1000);
+        return t;
+    }
+
     public void addLimit(int quantity, long time) {
         limits.add(Pair.<Integer, Long>create(quantity, time));
     }
@@ -48,12 +55,10 @@ public class Tracker {
     }
 
     public String log() {
-
         String str = "";
         for(Date d : log) {
             str = d.toString() + "\n" + str;
         }
         return str;
-
     }
 }

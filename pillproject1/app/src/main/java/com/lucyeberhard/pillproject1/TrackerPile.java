@@ -16,10 +16,17 @@ import java.util.ArrayList;
 
 public class TrackerPile {
 
-    ArrayList<Tracker> trackers;
+    public ArrayList<Tracker> trackers;
+    public Tracker top;
 
-    public TrackerPile(String serialization) {
+    public TrackerPile() {
         trackers = new ArrayList<Tracker>();
+        top = null;
+    }
+
+    public void add(Tracker t) {
+        trackers.add(t);
+        top = t;
     }
 
     public static TrackerPile deserialize(String serialization) {

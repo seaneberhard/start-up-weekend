@@ -13,20 +13,30 @@ import java.util.Date;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
-    Tracker tracker;
+    SharedPreferences prefs;
+    TrackerPile tp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
-        if (pref.getBoolean("firstTimer", true)) {
-            pref.edit().putBoolean("firstTimer", false).apply();
+        prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String serialization = prefs.getString(getString(R.string.serialization),null);
+        if (serialization == null) {
+            TrackerPile tp = new TrackerPile();
+            tp.add(Tracker.getDefault());
+            save();
             startActivity(new Intent(this, AboutActivity.class));
         }
+        else {
+            tp = TrackerPile.deserialize(serialization);
+            setContentView(R.layout.activity_main);
+            countdown();
+        }
+    }
 
-        setContentView(R.layout.activity_main);
-        countdown();
+    private void save() {
+        prefs.edit().putString(R.string.serialization, tp.serialize());
     }
 
     /*
@@ -34,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
      */
     private void countdown() {
         final TextView text = (TextView) findViewById(R.id.countdown);
-        new CountDownTimer(tracker.timeLeft(), 1000) {
+        if (tp.top == null) return;
+        new CountDownTimer(tp.top.timeLeft(), 1000) {
             @Override
             public void onTick(long l) {
                 text.setText(String.format(Locale.US, "%02d:%02d:%02d", l / (3600 * 1000), l / (60 * 1000) % 60, l / 1000 % 60));
@@ -52,8 +63,9 @@ public class MainActivity extends AppCompatActivity {
      Called when user taps pop
      */
     public void pop(View view) {
-        if (tracker.timeLeft() > 0) return;
-        tracker.pop();
+        if (tp.top == null || tp.top.timeLeft() > 0) return;
+        tp.top.pop();
+        save();
         countdown();
     }
 
