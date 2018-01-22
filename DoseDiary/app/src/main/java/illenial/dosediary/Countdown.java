@@ -1,5 +1,6 @@
 package illenial.dosediary;
 
+import android.os.CountDownTimer;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -21,6 +22,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Locale;
 
 public class Countdown extends AppCompatActivity {
 
@@ -46,22 +48,12 @@ public class Countdown extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        // Create the adapter that will return a fragment for each of the three
-        // primary sections of the activity.
+        // Create the adapter that will return a fragment for each tab
         mSectionsPagerAdapter = new TrackerPile(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
     }
 
@@ -96,20 +88,25 @@ public class Countdown extends AppCompatActivity {
          * The fragment argument representing the section number for this
          * fragment.
          */
-        ArrayList<Pair<Integer, Long>> limits;
-        ArrayList<Date> log;
+        private String label;
+        private ArrayList<Pair<Integer, Long>> limits;
+        private ArrayList<Date> log;
 
         public Tracker() {
+            label = "";
             limits = new ArrayList<Pair<Integer, Long>>();
             log = new ArrayList<Date>();
         }
 
-        public void addLimit(int quantity, long time) {
-            limits.add(Pair.<Integer, Long>create(quantity, time));
-        }
+        public void setLabel(String label) { this.label = label; }
 
-        public void pop() {
+        public void addLimit(int quantity, long time) { limits.add(Pair.<Integer, Long>create(quantity, time)); }
+
+        public void pop(View view) {
+            if (timeLeft() > 0) return;
             log.add(new Date());
+            // todo: save state in shared prefs
+            countdown(view);
         }
 
         public long timeLeft() {
@@ -139,12 +136,28 @@ public class Countdown extends AppCompatActivity {
         }
 
         @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
+        public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.fragment_countdown, container, false);
             TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
+            textView.setText(label);
+            countdown(rootView);
             return rootView;
+        }
+
+
+        private void countdown(View rootView) {
+            final TextView text = (TextView) rootView.findViewById(R.id.countdown);
+            new CountDownTimer(timeLeft(), 1000) {
+                @Override
+                public void onTick(long l) {
+                    text.setText(String.format(Locale.US, "%02d:%02d:%02d", l / (3600 * 1000), l / (60 * 1000) % 60, l / 1000 % 60));
+                }
+
+                @Override
+                public void onFinish() {
+                    text.setText(R.string.log_dose_text);
+                }
+            }.start();
         }
     }
 
@@ -174,5 +187,9 @@ public class Countdown extends AppCompatActivity {
 
         @Override
         public int getCount() { return trackers.size(); }
+    }
+
+    private void serialize() {
+        // todo : serialize state
     }
 }
