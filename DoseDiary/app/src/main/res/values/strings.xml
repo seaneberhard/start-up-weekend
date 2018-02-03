@@ -3,4 +3,8 @@
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="log_dose_text">Log Dose</string>
+    <string name="show_about_text">About</string>
+    <string name="show_log_text">Log</string>
+    <string name="add_tracker_text">Add</string>
+    <string name="edit_tracker_text">Edit</string>
 </resources>

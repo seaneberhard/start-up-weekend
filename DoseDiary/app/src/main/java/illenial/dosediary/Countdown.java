@@ -104,8 +104,8 @@ public class Countdown extends AppCompatActivity {
 
         public void pop(View view) {
             if (timeLeft() > 0) return;
-            log.add(new Date());
-            // todo: save state in shared prefs
+                log.add(new Date());
+                // todo: save state in shared prefs
             countdown(view);
         }
 

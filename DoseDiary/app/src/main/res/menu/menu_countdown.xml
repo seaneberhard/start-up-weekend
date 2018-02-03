@@ -3,8 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="illenial.dosediary.Countdown">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/edit_tracker"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="@string/edit_tracker_text"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/add_tracker"
+        android:orderInCategory="100"
+        android:title="@string/add_tracker_text"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/show_log"
+        android:orderInCategory="100"
+        android:title="@string/show_log_text"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/show_about"
+        android:orderInCategory="100"
+        android:title="@string/show_about_text"
         app:showAsAction="never" />
 </menu>
